@@ -1,7 +1,6 @@
 export function parseSections(text) {
   const sections = {
     summary: "None",
-    commit: "None",
     risks: "None",
     improvements: "None",
     tests: "None"
@@ -9,7 +8,6 @@ export function parseSections(text) {
 
   const patterns = {
     summary: /=== SUMMARY ===([\s\S]*?)(?===|$)/,
-    commit: /=== SUGGESTED COMMIT MESSAGE ===([\s\S]*?)(?===|$)/,
     risks: /=== RISKS ===([\s\S]*?)(?===|$)/,
     improvements: /=== IMPROVEMENTS ===([\s\S]*?)(?===|$)/,
     tests: /=== TESTS ===([\s\S]*?)(?===|$)/

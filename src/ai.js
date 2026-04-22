@@ -48,3 +48,36 @@ export async function getAiResponse(diff) {
     throw new Error("Gemini API error: " + err.message);
   }
 }
+
+export async function getCommitMessage(diff) {
+  const apiKey = process.env.GEMINI_API_KEY;
+
+  const genAI = new GoogleGenerativeAI(apiKey);
+
+  const model = genAI.getGenerativeModel({
+    model: "gemini-2.5-flash"
+  });
+
+  const prompt = `
+Generate a concise but detailed git commit message for the following diff.
+
+Diff:
+${diff}
+`;
+
+  const result = await model.generateContent({
+    contents: [
+      {
+        role: "user",
+        parts: [{ text: prompt }]
+      }
+    ],
+    generationConfig: {
+      maxOutputTokens: 60,
+      temperature: 0.2
+    }
+  });
+
+  return result.response.text().trim();
+}
+

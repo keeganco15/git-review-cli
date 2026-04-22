@@ -12,7 +12,7 @@ STRICT OUTPUT FORMAT (follow exactly):
 - Max 3 bullet points
 
 === SUGGESTED COMMIT MESSAGE ===
-- One concise commit message (single line, imperative tone)
+- One concise commit message (single line, imperative tone), reword and use summary if needed.
 
 === RISKS ===
 - Max 5 bullet points

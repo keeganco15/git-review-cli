@@ -4,7 +4,7 @@ import 'dotenv/config';
 import { getStagedDiff } from '../src/git.js';
 import { getAiResponse } from '../src/ai.js';
 import { parseSections } from '../src/formatter.js';
-
+import { getCommitMessage } from '../src/ai.js';
 
 async function main() {
     try {
@@ -18,11 +18,13 @@ async function main() {
 
         const parsed = parseSections(response);
 
+        const commitMessage = await getCommitMessage(diff);
+
         console.log("=== SUMMARY ===");
         console.log(parsed.summary);
 
         console.log("\n=== SUGGESTED COMMIT MESSAGE ===");
-        console.log(parsed.commit);
+        console.log(commitMessage);
 
         console.log("\n=== RISKS ===");
         console.log(parsed.risks);

@@ -2,6 +2,12 @@
 
 A lightweight CLI tool that reviews staged Git changes using AI and generates concise feedback along with a suggested commit message.
 
+![Node.js](https://img.shields.io/badge/Node.js-18+-339933?logo=node.js&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ESM-F7DF1E?logo=javascript&logoColor=black)
+![npm](https://img.shields.io/badge/npm-package-CB3837?logo=npm&logoColor=white)
+![Google Gemini](https://img.shields.io/badge/AI-Gemini_API-4285F4?logo=google&logoColor=white)
+![Git](https://img.shields.io/badge/Git-CLI-F05032?logo=git&logoColor=white)
+
 ---
 
 ## Overview

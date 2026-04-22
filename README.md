@@ -8,6 +8,11 @@ A lightweight CLI tool that reviews staged Git changes using AI and generates co
 ![Google Gemini](https://img.shields.io/badge/AI-Gemini_API-4285F4?logo=google&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-CLI-F05032?logo=git&logoColor=white)
 
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Platform](https://img.shields.io/badge/platform-CLI-lightgrey)
+![Status](https://img.shields.io/badge/status-stable-brightgreen)
+
+
 ---
 
 ## Overview

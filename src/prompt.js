@@ -2,29 +2,33 @@ export function buildPrompt(diff) {
   return `
 You are a senior engineer reviewing a git diff.
 
-Respond concisely and strictly in this format:
+You MUST return ALL sections below. Do not omit any section.
+
+If a section has no content, write "None".
+
+STRICT OUTPUT FORMAT (follow exactly):
 
 === SUMMARY ===
-Max 3 bullet points.
+- Max 3 bullet points
 
 === SUGGESTED COMMIT MESSAGE ===
-Short description of changes made.
+- One concise commit message (single line, imperative tone)
 
 === RISKS ===
-Max 5 bullet points. Only real issues.
+- Max 5 bullet points
 
 === IMPROVEMENTS ===
-Max 5 bullet points. Be specific.
+- Max 5 bullet points
 
 === TESTS ===
-Max 5 bullet points. Concrete cases.
+- Max 5 bullet points
 
 Rules:
-- No explanations outside sections
-- No repetition
-- No generic advice
-- Keep total response under 200 words
-- Always send respond with a suggested commit message
+- Do NOT skip any section
+- Do NOT add extra sections
+- Do NOT add explanations outside sections
+- Keep total response under 150 words
+- Be concise and specific
 
 Git diff:
 ${diff}
